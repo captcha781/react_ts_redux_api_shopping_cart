@@ -19,14 +19,16 @@ const EditCard = ({ product }: Prop) => {
 
     const updateHandler = () => {
         let productIndex = products.findIndex(val => Number(val.id) === Number(newData.id))
-        axios.put("https://632012e69f82827dcf243f80.mockapi.io/api/products/"+product.id)
+        axios.put("https://632012e69f82827dcf243f80.mockapi.io/api/products/"+product.id, newData)
         .then(response => {
             products[productIndex] = newData
+            
             dispatch(initializeProduct(products))
             let cartIndex = cart.findIndex(val => Number(val.product.id) === Number(newData.id))
             let cartFilter= cart.filter(val => Number(val.product.id) === Number(newData.id))
 
             cart[cartIndex] = {product: newData, quantity: cartFilter[0].quantity}
+            
             return axios.put("https://632012e69f82827dcf243f80.mockapi.io/api/cart/1101",{
                 id: 1101,
                 cart: cart
