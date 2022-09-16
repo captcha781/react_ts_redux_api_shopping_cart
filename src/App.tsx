@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
+import Edit from "./Pages/Edit";
 import Navbar from "./Components/Navbar";
 import axios from "axios";
 import { initializeProduct, initializeCart } from "./Features/Cart";
@@ -63,6 +64,7 @@ const App: React.FC = (): JSX.Element => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/edit" element={<Edit />} />
         </Routes>
       </BrowserRouter>
       <Snackbar

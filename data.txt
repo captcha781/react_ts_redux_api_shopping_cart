@@ -1,0 +1,58 @@
+products = [
+ {
+  "title": "A Book",
+  "price": 199.95,
+  "description": "Really a good book...",
+  "imageUrl": "https://unsplash.com/photos/lGlZJ1TyI8E/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8Ym9va3xlbnwwfDJ8fHwxNjYyOTc3NTgy&force=true&w=640",
+  "id": "1"
+ },
+ {
+  "title": "Mobile Phone",
+  "price": 1299,
+  "description": "This is a fantastic smartphone",
+  "imageUrl": "https://unsplash.com/photos/xdLXPic3Wfk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8cGhvbmV8ZW58MHwyfHx8MTY2Mjk4MjIwMw&force=true&w=640",
+  "id": "2"
+ },
+ {
+  "title": "Airplane",
+  "price": 1000000,
+  "description": "This is a superfast airplane",
+  "imageUrl": "https://unsplash.com/photos/2zCSa7jPYRM/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mjd8fGFpcmNyYWZ0fGVufDB8Mnx8fDE2NjI5ODU3ODM&force=true&w=640",
+  "id": "3"
+ },
+ {
+  "title": "Ship",
+  "price": 10000000,
+  "description": "This is a cruise ship",
+  "imageUrl": "https://unsplash.com/photos/Yq8Jr7-vaw8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNoaXB8ZW58MHwyfHx8MTY2Mjk4NTg1MA&force=true&w=640",
+  "id": "4"
+ }
+]
+
+cart = [
+ {
+  "id": "1101",
+  "cart": [
+   {
+    "product": {
+     "title": "A Book",
+     "price": 199.95,
+     "description": "Really a good book...",
+     "imageUrl": "https://unsplash.com/photos/lGlZJ1TyI8E/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8Ym9va3xlbnwwfDJ8fHwxNjYyOTc3NTgy&force=true&w=640",
+     "id": "1"
+    },
+    "quantity": 4
+   },
+   {
+    "product": {
+     "title": "Mobile Phone",
+     "price": 1299,
+     "description": "This is a fantastic smartphone",
+     "imageUrl": "https://unsplash.com/photos/xdLXPic3Wfk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8cGhvbmV8ZW58MHwyfHx8MTY2Mjk4MjIwMw&force=true&w=640",
+     "id": "2"
+    },
+    "quantity": 3
+   }
+  ]
+ }
+]

@@ -2,12 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { addToCart } from '../../Features/Cart';
 import { useAppDispatch, useAppState } from '../../Store/Hooks';
+import {useNavigate} from "react-router-dom"
 
 interface Props {
   item: CartItem
 }
 
 const CartCard = ({ item }: Props) => {
+  const navigate = useNavigate()
   let cart = useAppState(state => state.cart.cart)
   const dispatch = useAppDispatch()
   const [quantity, setQuantity] = useState<number>(item.quantity)
@@ -139,7 +141,7 @@ const CartCard = ({ item }: Props) => {
         <div className='text-slate-800 mt-0 font-serif text-sm'>reviews(<span className='text-slate-400'>{Math.floor(Math.random() * 49)}</span>)</div>
         <div className='text-sm text-slate-700 mt-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius enim magni, fugit ex veniam libero!</div>
 
-        <div className='mt-5 w-full py-1 rounded-md bg-teal-400 text-center font-semibold text-white cursor-pointer border hover:border-teal-500 hover:bg-white hover:text-teal-600 duration-200'>Show Product</div>
+        <div className='mt-5 w-full py-1 rounded-md bg-teal-400 text-center font-semibold text-white cursor-pointer border hover:border-teal-500 hover:bg-white hover:text-teal-600 duration-200' onClick={() => { navigate("/edit?id="+item.product.id) }} >Edit Product</div>
 
       </div>
       <div className='w-full sm:w-1/3 3 text-slate-700'>
